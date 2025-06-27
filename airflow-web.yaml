@@ -1,0 +1,61 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: airflow-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: airflow-web
+  template:
+    metadata:
+      labels:
+        app: airflow-web
+    spec:
+      containers:
+        - name: webserver
+          image: quay.io/astronomer/ap-airflow:2.9.0-buster
+          args: ["webserver"]
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: airflow-config
+          volumeMounts:
+            - name: dags
+              mountPath: /opt/airflow/dags
+            - name: logs
+              mountPath: /opt/airflow/logs
+      volumes:
+        - name: dags
+          persistentVolumeClaim:
+            claimName: airflow-dags
+        - name: logs
+          persistentVolumeClaim:
+            claimName: airflow-logs
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: airflow-web
+spec:
+  selector:
+    app: airflow-web
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: airflow-web
+spec:
+  to:
+    kind: Service
+    name: airflow-web
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge

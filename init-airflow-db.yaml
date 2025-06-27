@@ -1,0 +1,16 @@
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: airflow-init-db
+spec:
+  template:
+    spec:
+      containers:
+        - name: init-db
+          image: quay.io/astronomer/ap-airflow:2.9.0-buster
+          command: ["airflow", "db", "init"]
+          envFrom:
+            - configMapRef:
+                name: airflow-config
+      restartPolicy: OnFailure
