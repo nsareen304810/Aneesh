@@ -1,4 +1,3 @@
-
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -13,4 +12,10 @@ spec:
           envFrom:
             - configMapRef:
                 name: airflow-config
+          env:
+            - name: AIRFLOW__CORE__FERNET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: airflow-secrets
+                  key: fernet-key
       restartPolicy: OnFailure
