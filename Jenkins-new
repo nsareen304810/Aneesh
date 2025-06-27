@@ -1,0 +1,53 @@
+pipeline {
+  agent any
+
+  environment {
+    AIRFLOW_IMAGE = 'quay.io/astronomer/ap-airflow:2.9.0-buster'
+    PROJECT_NAME = 'is-prbk-airflow-q'
+  }
+
+  stages {
+    stage('Deploy to OpenShift') {
+      steps {
+        script {
+          openshift.withCluster() {
+            openshift.withProject(PROJECT_NAME) {
+
+              // Apply PVCs
+              openshift.apply("-f manifests/airflow-pvcs.yaml")
+
+              // Deploy PostgreSQL
+              openshift.apply("-f manifests/postgres-deployment.yaml")
+
+              // Apply Airflow ConfigMap
+              openshift.apply("-f manifests/airflow-config.yaml")
+
+              // Initialize Airflow DB
+              def initJob = openshift.apply("-f manifests/init-airflow-db.yaml").object()
+              openshift.selector("job", initJob.metadata.name).untilEach {
+                it.object().status.succeeded == 1
+              }
+
+              // Deploy Webserver & Scheduler
+              openshift.apply("-f manifests/airflow-web.yaml")
+              openshift.apply("-f manifests/airflow-scheduler.yaml")
+
+              // Print route info
+              def route = openshift.selector("route", "airflow-web").object()
+              echo "Access Airflow UI at: https://${route.spec.host}"
+            }
+          }
+        }
+      }
+    }
+  }
+
+  post {
+    success {
+      echo "✅ Apache Airflow successfully deployed to OpenShift project '${env.PROJECT_NAME}'"
+    }
+    failure {
+      echo "❌ Deployment failed. Check logs for details."
+    }
+  }
+}
