@@ -2,20 +2,49 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: airflow-init-db
+  namespace: is-prbk-airflow-q
+  labels:
+    app: airflow
 spec:
   template:
+    metadata:
+      labels:
+        app: airflow
     spec:
+      restartPolicy: OnFailure
       containers:
-        - name: init-db
-          image: quay.io/astronomer/ap-airflow:2.9.0-buster
-          command: ["airflow", "db", "init"]
-          envFrom:
-            - configMapRef:
-                name: airflow-config
+        - name: airflow-init
+          image: quay.io/astronomer/ap-airflow:2.9.1-20240524  # Example image
+          imagePullPolicy: IfNotPresent
+          command: ["bash", "-c"]
+          args:
+            - |
+              echo "Initializing Airflow DB...";
+              airflow db init;
+              echo "Creating Airflow Admin User...";
+              airflow users create \
+                --username admin \
+                --password admin \
+                --firstname Airflow \
+                --lastname Admin \
+                --role Admin \
+                --email admin@example.com;
+              echo "Initialization complete."
           env:
-            - name: AIRFLOW__CORE__FERNET_KEY
+            - name: AIRFLOW__CORE__EXECUTOR
+              value: LocalExecutor
+            - name: AIRFLOW__DATABASE__SQL_ALCHEMY_CONN
               valueFrom:
                 secretKeyRef:
-                  name: airflow-secrets
-                  key: fernet-key
-      restartPolicy: OnFailure
+                  name: airflow-db-secret
+                  key: sql_alchemy_conn
+            - name: AIRFLOW_HOME
+              value: /opt/airflow
+          volumeMounts:
+            - name: airflow-config
+              mountPath: /opt/airflow/airflow.cfg
+              subPath: airflow.cfg
+      volumes:
+        - name: airflow-config
+          configMap:
+            name: airflow-config
