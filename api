@@ -1,1 +1,631 @@
 
+ Professional Services for . | Page 1
+SWP API Inventory
+Allows real-time, dynamic communication between systems via HTTP requests and responses in formats like JSON or XML. API Name Domain Type Service Description Retrieve Available PME Template Details
+Portfolio and Model Management
+Retrieval
+This service enables the ability to retrieve the available PME Template details Initiate the Creation of a PME Strategy Model
+Portfolio and Model Management
+Initiation
+This service enables the ability to create a PME Strategy model Initiate the Creation of a PME Overlay Model
+Portfolio and Model Management
+Initiation
+This service enables the ability to create a PME Overlay model Initiate the Creation of a PME Portfolio
+Portfolio and Model Management
+Initiation
+This service enables the ability to create a PME portfolio Retrieve, Create, or Update a PME Model Assignment
+Portfolio and Model Management
+Retrieval
+This service enables the ability to create, update, delete, or retrieve a PME investment model assignment Initiate the Assignment of a PME Implementation Model
+Portfolio and Model Management
+Initiation
+This service enables the ability to assign a PME Implementation model to an account or portfolio Initiate the Deletion of a PME Investment Model from an Account or Portfolio
+Portfolio and Model Management
+Initiation
+This service enables the ability to delete a PME investment model from an account or portfolio
+ Professional Services for . | Page 2
+API Name Domain Type Service Description Retrieve PME Investment Model
+Portfolio and Model Management
+Retrieval
+This service enables the ability to retrieve the investment model associated with an account or portfolio Initiate the Assignment of a PME Asset Allocation Model
+Portfolio and Model Management
+Initiation
+This service enables the ability to assign a PME Asset Allocation Model to an account or portfolio Initiate the Update of a PME Investment Group
+Portfolio and Model Management
+Initiation
+This service enables the ability to update a PME Investment Group Initiate the Deletion of a PME Investment Group
+Portfolio and Model Management
+Initiation
+This service enables the ability to delete a PME investment group Initiate the Creation of a PME Investment Group
+Portfolio and Model Management
+Initiation
+This service enables the ability to create a PME investment group. Initiate the Creation or Update of an Investment Model
+Portfolio and Model Management
+Initiation
+This service enables the ability to create new or update existing static, dynamic, or hedge investment models. Retrieve Entity Details
+Client Management
+Retrieval
+This service enables the ability to retrieve entity details - including those in Work in Progress (W.I.P.) status - based on the Entity ID. Initiate the Update of a Settlement Record Status for Free Movement Activities
+Activity Management
+Initiation
+This service enables the ability to update the settlement status of an unmatched settlement record to "Complete". Retrieve Strategy List
+Portfolio and Model Management
+Retrieval
+This service enables the ability to retrieve a list of currently available strategies within a firm (or a sub-firm) that can be assigned to an account.
+ Professional Services for . | Page 3
+API Name Domain Type Service Description
+NOTE: This service does not return Inactive, dormant or "pending approval" strategies. Retrieve Activities
+Activity Management
+Retrieval
+This service enables the ability to retrieve either open or close activities at the account and/or client level. Initiate the Derivation of a Reinvestment Method from a Buy Order
+Order Management
+Initiation
+This service enables the ability to derive an applicable reinvestment option for a "buy" order given a portfolio and instruments combination. Either an applicable reinvestment method or a list of options for user to select while placing a manual trade will be provided. Initiate the Creation of an Asset Override Request
+Portfolio and Model Management
+Initiation
+This service enables the ability to create requests to override fund asset specific information. Retrieve Amortization and Accretion Information
+Asset
+Retrieval
+This service enables the ability to retrieve upcoming amortization & accretion schedules along with expected adjustment amounts on a position all the way to the maturity of the asset, as well as amortization/accretion adjustment amounts on a position for future interest pay periods until the maturity of the asset. Initiate the Update of Account Required Review Type
+Client Management
+Initiation
+This service enables the ability to update the required review type on an account
+ Professional Services for . | Page 4
+API Name Domain Type Service Description Retrieve Real and Simulated Provisional Order Details
+Portfolio and Model Management
+Retrieval
+This service enables the ability to retrieve the real and simulated provisional orders for a given token ID. Retrieve Active Counterparty Details
+Transfer Services
+Retrieval
+This service enables the ability to retrieve active counterparties in the Platform based on party name and/or an ID value. Initiate the Association of a Real-Time Fee Package to an Account
+Fees and Commissions
+Initiation
+This service enables the ability to associate a real-time fee package to an account. Retrieve Firm Base Currency Cache
+Infrastructure
+Retrieval
+This service enables the ability to retrieve a firm's base currency cache based on a given Firm ID. Retrieve Firm Account Base Currency Cache
+Infrastructure
+Retrieval
+This service enables the ability to retrieve a firm's default account base currency based on a given Firm ID. Retrieve Firm Users by Firm and Service ID
+User Administration
+Retrieval
+This service enables the ability to retrieve a firm's employee users based on the Firm and Service IDs. Initiate the Creation, Modification, or Deletion of an Account Level Proxy
+Corporate Action
+Initiation
+This service enables the ability to manage (add, modify, and delete) a proxy at the account level. Initiate the Creation of an Executed FX Trade
+Order Management
+Initiation
+This service enables the ability to create Executed FX Spot Deals. Initiate Free Receipt Services
+Transfer Services
+Initiation
+This service enables the ability to modify the amount and cost basis of a pending free receipt.
+ Professional Services for . | Page 5
+API Name Domain Type Service Description Initiate Free Delivery Services
+Transfer Services
+Initiation
+This service enables the ability to initiate the workflow to stage a pended free delivery request in the platform. Retrieve Party Tax Preferences
+Client Management
+Retrieval
+This service enables the ability to retrieve tax preference details for a party. Retrieve Loader Status
+Loader Framework
+Retrieval
+This service allows to retrieve the status of a loader file using the input LoaderId. Initiate the Reload of a Loader
+Infrastructure
+Initiation
+This service enables the ability to reload a previously submitted loader. Initiate the Update of an Inter-Account Transfer
+Client Management
+Initiation
+This service enables the ability to update the details of an existing inter-account transfer. Retrieve Historical Asset Prices
+Portfolio Aggregation/Held Away
+Retrieval
+This service enables the ability to retrieve historical asset prices. Retrieve DSR Tags
+Client Management
+Retrieval
+This service enables the ability to retrieve the existing DSRs associated with a client or account. Retrieve Firm Cache
+Infrastructure
+Retrieval
+This service enables the ability to retrieve the firm cache details based on a provided Firm ID. Retrieve Investment Performance
+Portfolio Aggregation/Held Away
+Retrieval
+This service enables the ability to retrieve and view investment returns for a particular client or account.
+ Professional Services for . | Page 6
+API Name Domain Type Service Description Retrieve PME Trade Session Token Provisional Exceptions
+Order Management
+Retrieval
+This service enables the ability to retrieve the list of exceptions for a token before submission. Initiate the Creation of a PME Order Cancel Request
+Order Management
+Initiation
+This service enables the ability to cancel one or multiple orders in PME, SWP and target OMS. Retrieve Net Available Currency Balance
+Core Accounting
+Retrieval
+This service enables the ability to retrieve the net available currency balance for an account, portfolio and currency combination Initiate the Update of an External User
+User Administration
+Initiation
+This service enables the ability to initiate the update of an external user. Retrieve CPM Activities
+Portfolio and Model Management
+Retrieval
+This service enables the ability to retrieve CPM activities and update UCA profile. Initiate the Update of the Principal Encroachment Flag
+Client Management
+Initiation
+This service enables the ability to initiate the update of the Principal Encroachment flag for a specified account. Initiate the Update of Tax Preferences
+Client Management
+Initiation
+This service provides the ability to initiate the update of tax preferences fields for a specified party or external party identifier. Initiate the Update of an Employee User
+User Administration
+Initiation
+This service enables the ability to initiate updates to employee Core Platform UI users. Retrieve PME Submitted Orders Summary
+Portfolio and Model Management
+Retrieval
+This service enables the ability to retrieve a submitted orders summary for a given PME session.
+ Professional Services for . | Page 7
+API Name Domain Type Service Description Retrieve PME Submitted Orders Details
+Portfolio and Model Management
+Retrieval
+This service enables the ability to retrieve submitted orders details for a given PME Confirmation Number. Retrieve PME Trade Session Request Status
+Portfolio and Model Management
+Retrieval
+This service enables the ability to retrieve the Request Status for a specified PME Trade Session. Retrieve PME Provisional Orders Summary
+Portfolio and Model Management
+Retrieval
+This service enables the ability to retrieve a provisional orders summary for a specified PME session. Retrieve PME Provisional Order Details
+Portfolio and Model Management
+Retrieval
+This service enables the ability to retrieve PME provisional orders details for a specified PME session. Initiate the Creation of a PME Trade Session Cancel Request
+Portfolio and Model Management
+Initiation
+This service enables the creation of a cancelation request for a specified PME Trade Session Token. Initiate the Creation of a PME Trade Session Token Request
+Portfolio and Model Management
+Initiation
+This service enables the ability to create a PME Trade Session Token request. Initiate the Creation of a PME Trade Session Token
+Portfolio and Model Management
+Initiation
+This service enables the ability to create a PME Trade Session Token for a given portfolio or group. Retrieve Tax Lot Details
+Core Accounting
+Retrieval
+This service enables the ability to retrieve the current detailed Tax Lot details for all assets in the specified portfolio, or for the specified portfolio/instrument combination.
+ Professional Services for . | Page 8
+API Name Domain Type Service Description Retrieve Cache Details
+Infrastructure
+Retrieval
+This service enables the ability to retrieve the system cache details for the specified code name and locale ID. Retrieve PME Confirmation Number
+Portfolio and Model Management
+Retrieval
+This service enables the ability to retrieve the PME confirmation number for a specified Token ID. Retrieve Trade Session Exceptions
+Portfolio and Model Management
+Retrieval
+This service enables the ability to retrieve PME trade session exceptions. Initiate the Creation of a Single Trade
+Order Management
+Initiation
+This service enables the ability to initiate and submit a trade order for a single Portfolio. Initiate the Match and Settlement of a Free Movement Activity
+Transfer Services
+Initiation
+This service enables the ability to initiate the workflow to match and settle a Free Movement activity against a settlement record. Initiate the Update of Settlement Records to Complete
+Transfer Services
+Initiation
+This service enables the ability to update a unmatched settlement record status as complete. Retrieve Security Lending Details
+Portfolio and Model Management
+Retrieval
+This service enables the ability to create, modify and retrieve Securities Lending positions. Initiate the Edit of a Free Delivery
+Transfer Services
+Initiation
+This service enables the ability to edit a Pending Free Delivery activity. Initiate the Edit of a Custody Transfer
+Transfer Services
+Initiation
+This service enables the ability to edit the Requested Date and Settlement Date for a Pending Custody Transfer activity.
+ Professional Services for . | Page 9
+API Name Domain Type Service Description Initiate the Maintenance of Client Communication Preferences
+Client Management
+Initiation
+This service enables the ability to maintain the following preferences for the  Total Wealth Application: Statement Delivery Method Client Prospectus Delivery Method Account Proxy Delivery Method Tax Form Delivery Method Initiate the Creation of Corporate Action Proxies for an Account
+Corporate Action
+Initiation
+This service enables the ability to create corporate action proxies for an account. Retrieve or Update Client Tax Forms
+Client Management
+Retrieval
+This service enables the update of tax form information for a client as well as the retrieval of tax form information. Initiate the Creation/Subscription of an Asset
+Asset
+Initiation
+This service enables the ability to create a new marketable asset or subscribe a vendor asset. Retrieve or Update Account Tax Details
+Client Management
+Retrieval
+This service enables the ability to update the tax details for an account. Initiate Override of Account Withholding Tax Category Details
+Client Management
+Initiation
+This service enables the ability to override the withholding tax category details for an account. Initiate the Creation of a PME Trade Execution Request
+Order Management
+Initiation
+This service enables the ability to execute a single trade from an order management system. Initiate the Update of a Portfolio
+Client Management
+Initiation
+This service enables the ability to update the details of an existing portfolio.
+ Professional Services for . | Page 10
+API Name Domain Type Service Description Retrieve Client Contact Details
+Client Management
+Retrieval
+This service provides an ability to retrieve Client Contact Details for an end client or a third party. Initiate the Creation of FX Orders
+Order Management
+Initiation
+This service enables the ability to create Foreign Exchange spot or forward orders. Initiate Enrollment Enrichment by BPM ID
+Client Management
+Initiation
+This service enables the ability to complete the enrolment enrichment process by updating the activity status using a provided Business Process Instance ID Initiate Enrollment Enrichment by Activity ID
+Client Management
+Initiation
+This service enables the ability to complete the enrolment enrichment process by updating the activity status using a provided Activity ID Retrieve the Enrollment BPM Status
+Client Management
+Retrieval
+This service enables the ability to retrieve enrolment details based on the Business Process ID and Firm ID provided. Initiate the Creation of a New Account
+Client Management
+Initiation
+This service enables the ability to create a new account. Initiate the Creation/Maintenance of Cash Transfers - Direct Posting
+Cash
+Initiation
+This service enables the ability to initiate the creation/maintenance of cash transfers, via direct posting. This service minimizes the input validation to increase throughput. Only consider for extremely high volumes. Initiate the Creation/Maintenance of Cash Disbursements - Direct Posting
+Cash
+Initiation
+This service enables the ability to initiate the creation/maintenance of cash disbursements, via direct posting. This service minimizes the input validation to increase
+ Professional Services for . | Page 11
+API Name Domain Type Service Description
+throughput. Only consider for extremely high volumes. Initiate the Creation/Maintenance of Cash Receipts - Direct Posting
+Cash
+Initiation
+This service enables the ability to initiate the creation/maintenance of cash receipts, via direct posting. This service minimizes the input validation to increase throughput. Only consider for extremely high volumes. Initiate the Submission of a Loader
+Infrastructure
+Initiation
+This service enables the ability to submit a loader file in the pipe delimited format. Initiate the Download of a Loader Exception Extract
+Infrastructure
+Initiation
+The service enables the ability to download an exception extract file for any loader in "Exception - Pending Resolution" Status. Initiate the Deletion of Client Contact Details
+Client Management
+Initiation
+This service enables the ability to delete client contact details. Initiate the Creation of a Prospect (Legacy CAS)
+Client Acquisition
+Initiation
+This service enables the ability to create prospects in in legacy version of CAS System Retrieve Periodic Fee Package and Rule Details
+Fees and Commissions
+Retrieval
+This service enables the ability to retrieve the details of a single periodic fee package and its associated fee rules. Initiate the Creation or Modification of a Periodic Fee Rule
+Fees and Commissions
+Initiation
+This service enables the ability to create or modify a single periodic fee rule
+ Professional Services for . | Page 12
+API Name Domain Type Service Description Initiate the Creation or Modification of a Periodic Fee Package
+Fees and Commissions
+Initiation
+This service enables the ability to create or modify a single periodic fee package. Initiate the Creation of a new Periodic Fee Package Assignment for an Account
+Fees and Commissions
+Initiation
+This service enables the ability to add multiple periodic fee packages to an account using the provided account information, computation portfolio information, periodic fee package information, collection portfolio information and copy package flag Initiate the Creation of a new Periodic Fee Package for a Fee Group
+Fees and Commissions
+Initiation
+This service enables the ability to add multiple periodic fee packages to a fee group using the provided fee group information and periodic fee package information Initiate the Assignment of a Detailed Periodic Fee Package to an Account
+Fees and Commissions
+Initiation
+This service enables the ability to assign a single periodic fee package to an account. Initiate the Addition of a Final Fee Date to a Periodic Fee Package
+Fees and Commissions
+Initiation
+This service enables the ability to initiate the addition of a final fee date to a periodic fee package. Retrieve the Entitled Accounts for a User
+Client Management
+Retrieval
+This service enables the ability to retrieve the entitled accounts for a specific user. Initiate the Addition of an Owner to an Account
+Client Management
+Initiation
+This service enables the ability to initiate the addition of a new client, an existing client, or a third party as an Account Owner Initiate the Update of ISA and JISA Account Details
+Client Management
+Initiation
+This service enables the ability to initiate the update of ISA/JISA parameters for a specified account.
+ Professional Services for . | Page 13
+API Name Domain Type Service Description Initiate the Update of Corporate Action Standard Instructions
+Corporate Action
+Initiation
+This service enables the ability to initiate updates to Corporate Action Standing Instructions Initiate the Creation of an Enrollment Worksheet
+Client Management
+Initiation
+This service enables the ability to submit an enrolment worksheet for an account. Initiate the Update of Client Basic Profile
+Client Management
+Initiation
+This service enables the ability to initiate the update of the Client Basic Profile for a specified client. Initiate the Update of Account Optional Field Profile
+Client Management
+Initiation
+This service enables the ability to update the optional field profile for an account. Initiate the Update of Account ISA Status
+Client Management
+Initiation
+This service enables the ability to update to update the ISA subscription status and auto renewal on an account. Retrieve List of Clients or Households
+Client Management
+Retrieval
+The service provides the ability to retrieve the list of all qualifying clients and/or households for the specified criteria. Retrieve Recurring Scheduled Events
+Client Management
+Retrieval
+This service enables the ability to retrieve all recurring scheduled events for a specified account or client. Retrieve Investment Compliance Rules
+Client Management
+Retrieval
+This service enables the ability to retrieve investment compliance rules from the SWP platform Retrieve Fee Packages
+Client Management
+Retrieval
+This service provides an ability to retrieve fee packages that are associated with an account or a fee group.
+ Professional Services for . | Page 14
+API Name Domain Type Service Description Retrieve Clients for a Household
+Client Management
+Retrieval
+This service allows to retrieve the list of clients for a household. Retrieve Client or Third-Party Details
+Client Management
+Retrieval
+This service enables the ability to retrieve the details of an end client or a third party. Retrieve Allowable Direct Service Relationship Values
+Client Management
+Retrieval
+This service enables the ability to retrieve all Direct Service Relationships (DSRs) defined for a firm at a client or an account level, along with the allowable employees or teams for each DSR. Retrieve Account Group Details
+Client Management
+Retrieval
+This service provides an ability to retrieve information for an account and its related data defined for a fee group, client communication group or investment group Retrieve Account Details - OnBase
+Client Management
+Retrieval
+API for retrieval of account properties including CAA & SBLOC details. The API has been built specially to support OnBase integration for the IAS market unit Retrieve Account Characteristics
+Client Management
+Retrieval
+This service provides an ability to retrieve characteristics of an account Initiate the Update of Client Communication Events
+Client Management
+Initiation
+This service enables the ability to initiate the update of client communication events (e.g. Statements) for an account. Initiate the Update of a Trust Beneficiary
+Client Management
+Initiation
+This service enables the ability to update trust beneficiary details.
+ Professional Services for . | Page 15
+API Name Domain Type Service Description Initiate the Update of an Inheritance Beneficiary
+Client Management
+Initiation
+This service enables the ability to create new inheritance beneficiaries and update existing beneficiaries at the account level. Initiate Update of a Portfolio Strategy
+Client Management
+Initiation
+This service enables the ability to update an investment strategy for a portfolio. Initiate the Maintenance of Statement and Tax Form Delivery Method
+Client Management
+Initiation
+This service enables the ability to initiate the update of the delivery method preference for Statements and Tax Forms. Initiate the Update of Shadow Account Properties
+Client Management
+Initiation
+This service enables the ability to set or update the properties of a shadow account at the account level. Initiate the Creation/Maintenance of a Household
+Client Management
+Initiation
+This service enables the ability to initiate the creation, deletion or modification of a Household Initiate the Update of DSR Tags
+Client Management
+Initiation
+This service enables the ability to update Direct Servicing Relationship (DSR) tags for a specific client or account. Initiate the Update of Client Contact Details
+Client Management
+Initiation
+This service enables the ability to initiate the update of contact detail changes for a specified client. Initiate the Addition of Client Contact Details for End Clients and Third Parties
+Client Management
+Initiation
+This service enables the ability to update client contact details for users with the End Client and Third-Party roles. Initiate the Update of CA Notification Recipients
+Corporate Action
+Initiation
+This service enables the ability to update Corporate Actions (CA) notification recipients.
+ Professional Services for . | Page 16
+API Name Domain Type Service Description Initiate the Update of Account Qualifiers
+Client Management
+Initiation
+This service enables the ability to update Account Qualifiers for a specified Account. Initiate the Update of Account Ownership
+Client Management
+Initiation
+This service enables the ability to update account ownership when the provided account has multiple owners. Initiate the Update of Basic Account Details
+Client Management
+Initiation
+This service enables the ability to update basic profile details for an account. Initiate the Deletion of a Tax Beneficiary Association
+Client Management
+Initiation
+This service enables the ability to support the deletion of a Tax Package Copy To. Initiate the Creation or Deletion of Simple Client Relationships
+Client Management
+Initiation
+This service enables the ability to create or delete simple client relationships Initiate the Creation or Deletion of Client Communication Events
+Client Management
+Initiation
+This service enables the ability to create or delete client communication events for an account. Initiate the Creation of a Tax Beneficiary Association
+Client Management
+Initiation
+This service enables the ability to manage the Tax Package Copy-To for an account or end client. Initiate the Update of a Client Communication Group
+Client Management
+Initiation
+This service enables the ability to add an account to an existing client communication group. Initiate the Change of an Account Status
+Client Management
+Initiation
+This service will enable the ability to update the status of an open investment account, including the
+ Professional Services for . | Page 17
+API Name Domain Type Service Description
+status transition from open to pre-close and from pre-close to close. Initiate the Addition of an Income Portfolio to an Account
+Client Management
+Initiation
+This service enables the ability to add a new income portfolio to an existing capital portfolio in an account. Initiate the Addition/Deletion of Investment Compliance Rules
+Portfolio and Model Management
+Initiation
+This service enables the ability to add/delete the assignment of investment compliance rules for an account or client. Initiate the Addition of Tax Details to a Client or Third Party
+Client Management
+Initiation
+This service enables the ability to add tax details to a client or third party. Initiate the Addition of a Portfolio to an Account
+Client Management
+Initiation
+This service enables the ability to add a new capital portfolio to an account, with the option to create a linked income portfolio. Initiate the Addition of Allowable Currencies
+Client Management
+Initiation
+This service enables the ability to add allowable currencies to an account. Retrieve Account Details
+Client Management
+Retrieval
+This service enables the ability to retrieve the properties of an account including CAA & SBLOC details. Initiate an Email Notification
+Infrastructure
+Initiation
+This service enables the ability to initiate an outbound email notification to an Entity. Initiate the Settlement of a Free Movement Activity
+Transfer Services
+Initiation
+This service enables the ability to settle an existing free receipt, free delivery or custody transfer activity.
+ Professional Services for . | Page 18
+API Name Domain Type Service Description Retrieve Counterparty Details
+Transfer Services
+Retrieval
+This service provides the ability to retrieve counterparty details for Free Movement requests Retrieve the Status of a Pending Transfer
+Transfer Services
+Retrieval
+This service enables the ability to retrieve the status of Pending Transfers In requests to SPTC. Initiate the Creation of a Free Transfer Out Request
+Transfer Services
+Initiation
+This service enables the ability to send a Free Transfer Out request to SPTC Back Office. Initiate the Creation of a Free Transfer In Request
+Transfer Services
+Initiation
+This service enables the ability to send a Free Transfer In request to SPTC Back Office. Initiate the Creation of a Free Receipt
+Transfer Services
+Initiation
+This service enables the ability to create a Free Receipt for multiple assets associated with an account. Initiate the Creation of a Free Delivery
+Transfer Services
+Initiation
+This service enables the ability to create a Pending Free Delivery for multiple assets associated with an account. Initiate the Edit of a Free Receipt
+Transfer Services
+Initiation
+This service enables the ability to modify the amount and cost basis of a pending free receipt. Initiate the Cancellation of a Free Movement
+Transfer Services
+Initiation
+This service enables the ability to cancel Pending Free Movement transactions from an external system. Retrieve Transaction Details
+Core Accounting
+Retrieval
+The service enables the ability to retrieve transactions for a client or account.
+ Professional Services for . | Page 19
+API Name Domain Type Service Description Retrieve Active Investment Strategies
+Portfolio and Model Management
+Retrieval
+This service enables the ability to retrieve all active investment strategies associated with a particular firm or sub-firm. Retrieve Investment Strategy Details
+Portfolio and Model Management
+Retrieval
+This service enables the ability to retrieve information about a specified investment strategy. Initiate the Creation of an Ad Hoc Statement Event
+Statements and Advice
+Initiation
+This service enables the ability to create an ad hoc statement event for an account or account group. Initiate the Creation of an Investment Group
+Portfolio and Model Management
+Initiation
+This service enables the ability to create a new investment group or update an existing investment group in the Portfolio Manager Experience (PME). Retrieve Order Details
+Order Management
+Retrieval
+This service enables the ability to retrieve details of an Order Set based on the Order Set ID or an Activity ID Initiate the Maintenance Request for Portfolio Management Instruction Set
+Order Management
+Initiation
+This service enables the ability to create and update requests for the Portfolio Management Instruction Set Initiate the Update of a Model Assignment
+Portfolio and Model Management
+Initiation
+This service enables the ability the update models assigned to a particular portfolio or investment group in the Portfolio Manager Experience (PME). Initiate the Update of Account Trading Capacity
+Client Management
+Initiation
+This service enables the ability to update trading capabilities for a particular portfolio within an account.
+ Professional Services for . | Page 20
+API Name Domain Type Service Description Initiate the Creation of a Loan Payment
+Order Management
+Initiation
+This service enables the ability to create a Loan Payable or Receivable request for multiple portfolios within a single account. Initiate the Creation of a Tax Harvest Request
+Order Management
+Initiation
+This service enables the ability to create or amend a tax harvest request for an account. Retrieve Single Sign-On Parameters
+Infrastructure
+Retrieval
+This service enables the ability to store and retrieve parameters in support of a single sign-on workflow. Initiate End-Client Self Registration
+Infrastructure
+Initiation
+This service enables the ability for end clients to register themselves for Total Wealth as well as setting up client prospectus delivery method, statement preferences, and account proxy recipients. Retrieve Platform Availability
+Infrastructure
+Retrieval
+This service enables the ability to retrieve the availability status of the provided PO or firm, indicating whether the firm is in "Limited Availability" mode or not. Retrieve Activity State and Status
+Activity Management
+Retrieval
+This service provides an ability to retrieve the status and state of an activity. SWP OAUTH Token API
+Infrastructure
+SWP OAUT
+SWP OAUTH Token API Initiate the Deletion of a User
+User Administration
+Initiation
+This service enables the ability to delete a user. Initiate the Creation of a System User
+User Administration
+Initiation
+This service provides the ability to create a user in the system for an employee, end client, or interested party. Retrieve the Real Time Holdings of a Client
+Core Accounting
+Retrieval
+This service enables the ability to retrieve the real-time holdings for a client or an account.
+ Professional Services for . | Page 21
+API Name Domain Type Service Description Retrieve Historic Market Value
+Core Accounting
+Retrieval
+This service allows to retrieve market values for a set of provided dates at a client, account and portfolio level Retrieve Holdings for a Household
+Core Accounting
+Retrieval
+This service enables the ability to retrieve a list of all accounts and their holdings for an input list of clients. Retrieve Holdings for a Client
+Core Accounting
+Retrieval
+This service provides an ability to retrieve a list of account details, associated holdings, and historical market values for a given client. Initiate the Creation of a Commit on Positions or Tax Lots
+Core Accounting
+Initiation
+This service enables the ability to place a "commit" on positions (or tax lots of a position) within a particular account and portfolio. Retrieve Available Fee Packages
+Fees and Commissions
+Retrieval
+This service allows users to retrieve all the fee packages and associated details for a Firm including all fee packages associated with an input account or fee group on the platform. Initiate the Deletion of Accounts from a Fee Group
+Fees and Commissions
+Initiation
+This service provides the ability to remove accounts from a Fee group. Initiate the Creation of a One-Time Ad Hoc Fee
+Fees and Commissions
+Initiation
+This service enables the ability to create a one-time Ad Hoc fee. Initiate the Creation of a Fee Group
+Fees and Commissions
+Initiation
+This service enables the ability to creation a new fee group for the specified list of accounts. Initiate the Addition or Removal of Real Time Fee Packages for an Account
+Fees and Commissions
+Initiation
+This service enables the ability to add or remove real time fee packages for an account. Initiate the Addition of an Account to a Fee Group
+Fees and Commissions
+Initiation
+This service enables the ability to add an account to an existing fee computation group. Initiate the Upload of a Document
+Documents
+Initiation
+This service enables the ability to upload a document into the SWP
+ Professional Services for . | Page 22
+API Name Domain Type Service Description
+Document Management repository for the specified client or account. Initiate the Update of Client Communication Delivery Method
+Documents
+Initiation
+This service enables the ability to update a client communication method for a specified client. Retrieve Tax Document
+Documents
+Retrieval
+This service enables the ability to retrieve a specific US Tax document. Retrieve List of End Client Documents
+Documents
+Retrieval
+This service provides an ability to retrieve a list of documents for a given client or an interested party. It supports UK Tax Documents, Cost and Charges folder in UK, FIS documents, and Performance Reports. Retrieve Document
+Documents
+Retrieval
+This service retrieves the specific document based on the input Document ID. Initiate the Creation of a Client Communication Group
+Statements and Advice
+Initiation
+This service enables the ability to create a new client communication group, including the ability to add accounts to the group. Retrieve Cash Projection for an Account or Portfolio
+Cash
+Retrieval
+This service enables the ability to retrieve the cash projection for a particular account or portfolio. The service enables the multi-currency cash projection functionality from the platform. Initiate the Update of a Cash Receipt Payer Profile
+Cash
+Initiation
+This service enables the ability to update existing cash receipt payer profiles. Initiate the Update of a Cash Receipt Pay To Profile
+Cash
+Initiation
+This service enables the ability to update an existing cash receipt pay to profile. Initiate the Update of a Cash Receipt
+Cash
+Initiation
+This service enables the ability to update existing cash receipts to modify real time fees or override fees entirely for a particular account.
+ Professional Services for . | Page 23
+API Name Domain Type Service Description Initiate the Creation or Removal of a Cash Recipient Profile
+Cash
+Initiation
+This service enables the ability to create new cash recipient profiles for an account, including Payer, Pay for and Pay To. Initiate the Creation of a Cash Receipt
+Cash
+Initiation
+This service enables the creation of a cash receipt. Receipt types include ACR, Direct Payment (US only), Direct Debit (UK only), and memo post (US and UK). Initiate the Creation or Maintenance of a Cash Disbursement
+Cash
+Initiation
+This service enables the ability to initiate and modify a cash disbursement. Initiate the Creation/Maintenance of a Cash Transfer
+Cash
+Initiation
+This service enables the ability to initiate the creation, deletion or modification of a cash transfer. Initiate the Update of CA Notification Status
+Corporate Action
+Initiation
+This service enables the ability to update the CA Notification Status. Retrieve Asset Details
+Asset
+Retrieval
+This service enables the ability to retrieve details for an asset. Retrieve OAuth Access Token
+Infrastructure
+Retrieval
+This service enables the ability to retrieve an OAuth token for accessing  APIs.
