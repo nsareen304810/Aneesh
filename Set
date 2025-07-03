@@ -1,0 +1,13 @@
+# Ensure headers are unique
+seen = set()
+unique_headers = []
+for h in headers:
+    if h in seen:
+        count = 1
+        while f"{h}_{count}" in seen:
+            count += 1
+        h = f"{h}_{count}"
+    seen.add(h)
+    unique_headers.append(h)
+
+df = pd.DataFrame(rows, columns=unique_headers)
