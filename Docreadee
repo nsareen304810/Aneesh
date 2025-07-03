@@ -1,39 +1,46 @@
-from docx import Document
 import pandas as pd
+from docx import Document
 
-def extract_tables_from_docx(docx_path):
+def extract_tables_from_word(docx_path):
+    """
+    Extracts all tables from a .docx file and returns a list of pandas DataFrames.
+    """
     doc = Document(docx_path)
-    tables_data = []
+    tables = []
 
-    for idx, table in enumerate(doc.tables):
+    for i, table in enumerate(doc.tables):
         data = []
         for row in table.rows:
             data.append([cell.text.strip() for cell in row.cells])
         
-        # Convert to DataFrame
-        if len(data) >= 2:  # At least 1 header and 1 row
-            df = pd.DataFrame(data[1:], columns=data[0])
-        elif len(data) == 1:
-            df = pd.DataFrame(columns=data[0])
-        else:
-            continue
+        if not data:
+            continue  # Skip empty tables
 
-        df["Source_Table_Index"] = idx + 1  # Add source index
-        tables_data.append(df)
+        headers = data[0]
+        rows = data[1:] if len(data) > 1 else []
 
-    return tables_data
+        df = pd.DataFrame(rows, columns=headers)
+        df['Table_Index'] = i + 1  # Add index for traceability
+        tables.append(df)
 
-def combine_tables_and_save(tables, output_excel_path):
+    return tables
+
+def combine_and_export_to_excel(tables, output_excel_path):
+    """
+    Combines all DataFrames into one Excel sheet and writes to output path.
+    """
     if not tables:
-        print("No tables found.")
+        print("No tables found in the Word document.")
         return
+
     combined_df = pd.concat(tables, ignore_index=True)
     combined_df.to_excel(output_excel_path, index=False)
-    print(f"Excel file saved at: {output_excel_path}")
+    print(f"✅ Excel file saved to: {output_excel_path}")
 
-# === USAGE ===
-docx_file_path = "input.docx"       # Replace with your Word file path
-output_excel_path = "combined_tables.xlsx"
+# === Example Usage ===
+if __name__ == "__main__":
+    input_docx = "your_document.docx"               # Replace with your input file
+    output_excel = "combined_word_tables.xlsx"
 
-tables = extract_tables_from_docx(docx_file_path)
-combine_tables_and_save(tables, output_excel_path)
+    tables = extract_tables_from_word(input_docx)
+    combine_and_export_to_excel(tables, output_excel)
