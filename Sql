@@ -1,0 +1,17 @@
+SELECT
+    cols.table_name,
+    cols.column_name,
+    comm.comments AS column_description
+FROM
+    all_tab_columns cols
+LEFT JOIN
+    all_col_comments comm
+ON
+    cols.owner = comm.owner AND
+    cols.table_name = comm.table_name AND
+    cols.column_name = comm.column_name
+WHERE
+    cols.table_name IN ('TABLE1', 'TABLE2', 'TABLE3') -- use UPPERCASE
+    AND cols.owner = 'YOUR_SCHEMA' -- replace with your schema name
+ORDER BY
+    cols.table_name, cols.column_id;
